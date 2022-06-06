@@ -8,9 +8,9 @@ namespace CursoCSharp.Fundamentos {
     internal class Interpolacao {
 
         public static void Executar() {
-            String nome = "Mattheus Soares Barbosa";
+            string nome = "Mattheus Soares Barbosa";
             double idade = 24;
-            String nacionalidade = "Brasileira";
+            string nacionalidade = "Brasileira";
 
             Console.WriteLine("Há 3 formas de interpolar. Veja o código para ver as formas!");
             Console.WriteLine("O " + nome + " possui " + idade + " anos e a nacionalidade " + nacionalidade);

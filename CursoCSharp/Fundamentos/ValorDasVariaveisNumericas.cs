@@ -10,7 +10,8 @@ namespace CursoCSharp.Fundamentos {
             Console.WriteLine("Executando!!!");
 
             const double pi = 3.1415;
-            Console.WriteLine("pi = " + pi ); //no console imprime com vírgula por causa da linguagem padrão do sistema operacional
+            Console.WriteLine("pi = " + pi ); //no console imprime com vírgula por causa da
+                                              //linguagem padrão do sistema operacional
 
             bool estaChovendo = false;
             Console.WriteLine("estaChovendo = " + estaChovendo );

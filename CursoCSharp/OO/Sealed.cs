@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CursoCSharp.OO {
 
     sealed class SemFilho {
-        public double ValorDaFortuna() {
+        public static double ValorDaFortuna() {
             return 1000000;
         }
     }
@@ -34,7 +34,7 @@ namespace CursoCSharp.OO {
 
         //é possível criar um método com o mesmo nome do sealed. O novo método é o que será
         //levado em consideração quando chamar o método
-        public new bool PodeHonrarAFamilia() {
+        public static new bool PodeHonrarAFamilia() {
             return false;
         }
     }

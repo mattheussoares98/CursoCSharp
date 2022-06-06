@@ -8,8 +8,8 @@ namespace CursoCSharp.Colecoes {
     internal class FilaQueue {
 
         public static void Executar() {
-            Queue<object> queueObject = new Queue<object>();
-            Queue<string> nomes = new Queue<string>();
+            Queue<object> queueObject = new();
+            //Queue<string> nomes = new();
 
             queueObject.Enqueue(1);//adiciona items na fila
             queueObject.Enqueue(1.0);
@@ -18,7 +18,7 @@ namespace CursoCSharp.Colecoes {
 
             Console.WriteLine(queueObject.Count);
             queueObject.Peek();//retorna o item que está em primeiro na fila
-            queueObject.Dequeue();//retira o primeiro item que está pra sair da fila
+            object x = queueObject.Dequeue();//retira o primeiro item que está pra sair da fila e o retorna
             Console.WriteLine(queueObject.Count);
 
             Console.WriteLine(queueObject.Contains("1"));

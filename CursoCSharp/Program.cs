@@ -2,6 +2,8 @@
 using CursoCSharp.ClassesEMetodos;
 using CursoCSharp.Colecoes;
 using CursoCSharp.OO;
+using CursoCSharp.MetodosEFuncoes;
+using CursoCSharp.Excecoes;
 
 namespace CursoCSharp {
     class Program {
@@ -27,10 +29,12 @@ namespace CursoCSharp {
 
                 //Coleções
                 {"Array - Coleções", Colecoes.Array.Executar},
-                {"List - Coleções", Colecoes.List.Executar},
+                {"List - Coleções", List.Executar},
                 {"Queue = Fila - Coleções", FilaQueue.Executar},
                 {"Igualdade - Coleções", Igualdade.Executar},
-                {"Stack - Coleções", Stack.Executar},
+                {"Stack - Coleções", FilaStack.Executar},
+                {"Dictionary - OO", Dictionary.Executar},
+
 
                 //OO
                 {"Herança - OO", Heranca.Executar},
@@ -40,6 +44,15 @@ namespace CursoCSharp {
                 {"Abstract - OO", Abstract.Executar},
                 {"Interface - OO", Interface.Executar},
                 {"Sealed - OO", Sealed.Executar},
+
+                //Métodos e funções
+                {"Action e Func - Métodos e funções", ActionEFunc.Executar},
+                {"Delegate - Métodos e funções", MetodosEFuncoes.Delegate.Executar},
+                {"Métodos de extensão - Métodos e funções", MetodosDeExtensao.Executar},
+
+                //Exceções
+                {"Exceções - Exceções", Excecoes.Excecoes.Executar},
+                {"Exceções Personalizadas - Exceções", ExcecoesPersonalizadas.Executar},
             });
 
             central.SelecionarEExecutar();

@@ -6,36 +6,39 @@ using System.Threading.Tasks;
 
 namespace CursoCSharp.OO {
 
-    interface OperacaoBinariaInterface {
+    interface IOperacaoBinaria {
         //de padrão, todos métodos de um interface são públicos
         //não é possível implementar o corpo do método
         int Operacao(int a, int b);
     }
 
-    interface TesteInterface {
+    interface ITeste {
     }
 
     abstract class AbstractTeste {
     }
 
-    class Multiplicacao: AbstractTeste, OperacaoBinariaInterface, TesteInterface { //é possível implementar somente uma classe abstrata e quantas interfaces quiser
+    class Multiplicacao: AbstractTeste, IOperacaoBinaria, ITeste {
+        //é possível implementar somente uma classe abstrata e quantas interfaces quiser
         public int Operacao(int a, int b) {
             return a * b;
         }
     }
-    class Soma: AbstractTeste, OperacaoBinariaInterface, TesteInterface { //é possível implementar somente uma classe abstrata e quantas interfaces quiser
+    class Soma: AbstractTeste, IOperacaoBinaria, ITeste {
+        //é possível implementar somente uma classe abstrata e quantas interfaces quiser
         public int Operacao(int a, int b) {
             return a + b;
         }
     }
-    class Subtracao: AbstractTeste, OperacaoBinariaInterface, TesteInterface { //é possível implementar somente uma classe abstrata e quantas interfaces quiser
+    class Subtracao: AbstractTeste, IOperacaoBinaria, ITeste {
+        //é possível implementar somente uma classe abstrata e quantas interfaces quiser
         public int Operacao(int a, int b) {
             return a - b;
         }
     }
 
     internal class Calculadora {
-       private readonly List<OperacaoBinariaInterface> operacaoBinaria = new() {
+        private readonly List<IOperacaoBinaria> operacaoBinaria = new() {
             new Soma(),
             new Multiplicacao(),
             new Subtracao(),
@@ -46,7 +49,6 @@ namespace CursoCSharp.OO {
             foreach(var op in operacaoBinaria) {
                 int value = op.Operacao(a, b);
                 Console.WriteLine(op.GetType().Name);
-                //Console.WriteLine(op);
                 Console.WriteLine(value);
             }
         }

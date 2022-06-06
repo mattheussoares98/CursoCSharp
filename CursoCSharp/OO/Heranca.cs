@@ -8,10 +8,10 @@ namespace CursoCSharp.OO {
 
     public class Carro {
         protected readonly int VelocidadeMaxima; //só será possível alterar uma vez e em alguma classe que herde Carro
-        private  int VelocidadeAtual = 0;
+        private int VelocidadeAtual = 0;
 
         public Carro(int velocidadeMaxima) {
-            this.VelocidadeMaxima = velocidadeMaxima;
+            VelocidadeMaxima = velocidadeMaxima;
         }
         protected int AlterarVelocidade(int delta) {
 
@@ -29,28 +29,44 @@ namespace CursoCSharp.OO {
             return VelocidadeAtual;
         }
 
-        public virtual int Acelerar() { //a palavra virtual indica que esse método pode ser sobrescrito. De padrão, os métodos não podem ser sobrescritos
+        public virtual int Acelerar() { //a palavra virtual indica que esse método pode ser
+                                        //sobrescrito. De padrão, os métodos não podem ser
+                                        //sobrescritos
             return AlterarVelocidade(10);
 
         }
 
-        public virtual int Frear() { //a palavra virtual indica que esse método pode ser sobrescrito. De padrão, os métodos não podem ser sobrescritos
+        public virtual int Frear() { //a palavra virtual indica que esse método pode ser
+                                     //sobrescrito. De padrão, os métodos não podem ser
+                                     //sobrescritos
             return AlterarVelocidade(-10);
         }
     }
 
     public class Uno: Carro {
         public Uno() : base(200) { }
+        //como o Uno está herdando a classe Carro, ele precisa fazer referência a pelo menos um
+        //construtor do Carro, utilizando o base
     }
 
     public class Ferrari: Carro {
-        public Ferrari() : base(velocidadeMaxima: 350) { } //como no construtor do Carro precisa definir a velocidade máxima e não é possível definir isso no construtor da Ferrari, precisa definir conforme acima
+        public Ferrari() : base(velocidadeMaxima: 350) { }
+        //como a Ferrari está herdando a classe Carro, ele precisa fazer referência a pelo menos um
+        //construtor do Carro, utilizando o base
 
-        public override int Acelerar() { //só foi possível sobrescrever o método porque foi adicionado um "virtual" na declaração do método. É obrigatório informar que é virtual para conseguir sobrescrever. O método precisa receber os mesmos parâmetros que a classe que está sendo sobrescrita
+        public override int Acelerar() {
+            //só foi possível sobrescrever o método porque foi adicionado um "virtual" na
+            //declaração do método. É obrigatório informar que é virtual para conseguir
+            //sobrescrever. O método precisa receber os mesmos parâmetros que a classe que
+            //está sendo sobrescrita
             return AlterarVelocidade(20);
         }
 
-        public override int Frear() { //só foi possível sobrescrever o método porque foi adicionado um "virtual" na declaração do método. É obrigatório informar que é virtual para conseguir sobrescrever. O método precisa receber os mesmos parâmetros que a classe que está sendo sobrescrita
+        public override int Frear() {
+            //só foi possível sobrescrever o método porque foi adicionado um "virtual" na
+            //declaração do método. É obrigatório informar que é virtual para conseguir
+            //sobrescrever. O método precisa receber os mesmos parâmetros que a classe que
+            //está sendo sobrescrita
             return AlterarVelocidade(-20);
         }
     }

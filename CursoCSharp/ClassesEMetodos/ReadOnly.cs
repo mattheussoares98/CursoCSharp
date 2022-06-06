@@ -14,7 +14,9 @@ namespace CursoCSharp.ClassesEMetodos {
         }
     }
     public class Pessoa {
-        public readonly DateTime dataDeNascimento; //quando o atributo é ReadOnly, é possível alterar o valor dele apenas uma vez. Quando é const, funciona igual ao Dart, já precisa iniciar com um valor definido
+        public readonly DateTime dataDeNascimento;
+        //quando o atributo é ReadOnly, é possível alterar o valor dele apenas uma vez. Quando
+        //é const, funciona igual ao Dart, já precisa iniciar com um valor definido
         public string nome;
 
         public Pessoa(string nome, DateTime dataDeNascimento) {
@@ -22,6 +24,8 @@ namespace CursoCSharp.ClassesEMetodos {
             this.dataDeNascimento = dataDeNascimento;
 
             this.dataDeNascimento = new DateTime(year: 2022, month: 3, day: 31);
+            //mesmo com os dados sendo atribuídos no construtor, é possível
+            //alterá-los quando a classe é instanciada
         }
 
     }

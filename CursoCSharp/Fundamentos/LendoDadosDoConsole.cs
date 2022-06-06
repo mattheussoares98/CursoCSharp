@@ -11,7 +11,7 @@ namespace CursoCSharp.Fundamentos {
             var nome = Console.ReadLine();
 
             Console.WriteLine("Digite a sua idade: ");
-            int idade = int.Parse(Console.ReadLine());
+            int idade = int.Parse(Console.ReadLine()!);
 
             Console.WriteLine($"O {nome} possui {idade} anos");
         }

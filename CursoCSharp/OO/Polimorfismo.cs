@@ -7,25 +7,25 @@ using System.Threading.Tasks;
 namespace CursoCSharp.OO {
     public class Comida {
         public double PesoComida;
-        public Comida(double peso) {
-            PesoComida = peso;
+        public Comida(double pesoComida) {
+            PesoComida = pesoComida;
         }
         public Comida() {
         }
     }
 
     public class Feijao: Comida {
-        public Feijao(double peso) : base(peso) {
+        public Feijao(double peso) : base(pesoComida: peso) {
             PesoComida = peso;
         }
     }
     public class Arroz: Comida {
-        public Arroz(double peso) : base(peso) {
+        public Arroz(double peso) : base(pesoComida: peso) {
             PesoComida = peso;
         }
     }
     public class Mistura: Comida {
-        public Mistura(double peso) : base(peso) {
+        public Mistura(double peso) : base(pesoComida: peso) {
             PesoComida = peso;
         }
     }

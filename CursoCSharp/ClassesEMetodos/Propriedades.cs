@@ -16,9 +16,9 @@ namespace CursoCSharp.ClassesEMetodos {
         public Produto() {
         }
 
-        static double preco = 0;
-        static string nome = "";
-        static double desconto = -1;
+        double preco = 0;
+        string nome = "";
+        double desconto = -1;
 
 
         public string Nome {
@@ -112,14 +112,14 @@ namespace CursoCSharp.ClassesEMetodos {
 
                 dadoDigitadoEhValido = double.TryParse(dadoDigitadoPeloUsuario!, out double result);
 
-                if(dadoDigitadoEhValido) {
+                if(dadoDigitadoEhValido && result >=0 && result <= 100) {
                     produto.Desconto = double.Parse(dadoDigitadoPeloUsuario!);
 
                     Console.WriteLine("Desconto adicionado com sucesso!");
                     Console.WriteLine("");
 
                 } else {
-                    Console.WriteLine("Dado inválido!");
+                    Console.WriteLine("O desconto deve estar entre 0 e 100!");
                     Console.WriteLine("");
                 }
             }
@@ -130,19 +130,22 @@ namespace CursoCSharp.ClassesEMetodos {
             Console.WriteLine($"Desconto do produto: {produto.Desconto * 100}%");
             Console.WriteLine($"Preço do produto com desconto: {produto.PrecoComDesconto}");
 
+            Console.WriteLine("");
+            Console.WriteLine("##############################################################################");
+
             Produto produto2 = new() {
                 Nome = "Mattheus",
                 Preco = 100,
                 Desconto = 10
             };
 
-            Console.WriteLine("Nome do produto2: {0}", produto.Nome);
-            Console.WriteLine($"Preço do produto2: {produto.Preco}");
-            Console.WriteLine($"Desconto do produto2: {produto.Desconto * 100}%");
-            Console.WriteLine($"Preço do produto com desconto2: {produto.PrecoComDesconto}");
+            Console.WriteLine("Nome do produto2: {0}", produto2.Nome);
+            Console.WriteLine($"Preço do produto2: {produto2.Preco}");
+            Console.WriteLine($"Desconto do produto2: {produto2.Desconto * 100}%");
+            Console.WriteLine($"Preço do produto com desconto2: {produto2.PrecoComDesconto}");
 
 
-            Produto produtoComDadosNoConstrutor = new Produto(nome: "Mattheus", preco: 100, desconto: 10);
+            Produto produtoComDadosNoConstrutor = new(nome: "Mattheus", preco: 100, desconto: 10);
 
 
             Console.WriteLine("Nome do produto com dados no construtor: {0}", produtoComDadosNoConstrutor.Nome);
