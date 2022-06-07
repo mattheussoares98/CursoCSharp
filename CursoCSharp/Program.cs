@@ -4,6 +4,7 @@ using CursoCSharp.Colecoes;
 using CursoCSharp.OO;
 using CursoCSharp.MetodosEFuncoes;
 using CursoCSharp.Excecoes;
+using CursoCSharp.API;
 
 namespace CursoCSharp {
     class Program {
@@ -53,6 +54,9 @@ namespace CursoCSharp {
                 //Exceções
                 {"Exceções - Exceções", Excecoes.Excecoes.Executar},
                 {"Exceções Personalizadas - Exceções", ExcecoesPersonalizadas.Executar},
+
+                //API
+                {"Primeiro arquivo - API",  PrimeiroArquivo.Executar}
             });
 
             central.SelecionarEExecutar();
