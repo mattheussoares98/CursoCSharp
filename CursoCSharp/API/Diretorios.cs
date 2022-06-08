@@ -9,8 +9,7 @@ namespace CursoCSharp.API {
     internal class Diretorios {
 
         private static void GetData(string[] data) {
-            //fiz essa função pra não precisar ficar usando um foreach pra cada GET que retorna
-            //uma lista e ir percorrendo os dados pra exibir no prompt
+            //fiz essa função pra não precisar ficar usando um foreach pra cada GET que retorna uma lista e ir percorrendo os dados pra exibir no prompt
             foreach(string dataItem in data) {
                 Console.WriteLine(dataItem);
             }
@@ -18,11 +17,11 @@ namespace CursoCSharp.API {
 
         public static void Executar() {
             string diretorio = @"~/Diretorio".UpdateHomePath();
-            string leituraPastas = @"C:\Users\Soares".UpdateHomePath();
+            string leituraPastas = @"~".UpdateHomePath();
             string destino = @"~/Destino".UpdateHomePath();
 
             //var directoryInfo = new DirectoryInfo(leituraPastas);
-            //é possível pegar informações do diretório usando o DirectoryInfo ou Directory
+            //é possível pegar informações do diretório usando o DirectoryInfo ou Directory. Os métodos são muito parecidos
 
             if(Directory.Exists(diretorio)) {
                 Directory.Delete(diretorio, true);

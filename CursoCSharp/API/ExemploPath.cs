@@ -7,6 +7,7 @@ using System.IO;
 
 namespace CursoCSharp.API {
     internal class ExemploPath {
+        //basicamente serve somente para pegar informações das pastas
         public static void Executar() {
             string pastaLeituraDados = @"~/".UpdateHomePath();
 

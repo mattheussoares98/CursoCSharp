@@ -61,6 +61,7 @@ namespace CursoCSharp {
                 {"Exemplo File Info Escrevendo - API",  ExemploFileInfoEscrevendo.Executar},
                 {"Diretorios - API",  Diretorios.Executar},
                 {"Exemplo Path - API",  ExemploPath.Executar},
+                {"Datas - API",  Datas.Executar},
             });
 
             central.SelecionarEExecutar();

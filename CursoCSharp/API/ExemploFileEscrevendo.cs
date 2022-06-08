@@ -7,28 +7,24 @@ using System.IO; //utilizado para manipular arquivos
 
 namespace CursoCSharp.API {
     public static class GetHomePath {
-        private static readonly string homePath = (Environment.OSVersion.Platform == PlatformID.Unix ||
-                     Environment.OSVersion.Platform == PlatformID.MacOSX)
-      ? Environment.GetEnvironmentVariable("HOME")
-      : Environment.ExpandEnvironmentVariables("%HOMEDRIVE%%HOMEPATH%");
-
         public static string UpdateHomePath(this string path) {
-            return path.Replace("~", homePath);
+            string? home = (Environment.OSVersion.Platform == PlatformID.Unix ||
+                             Environment.OSVersion.Platform == PlatformID.MacOSX)
+              ? Environment.GetEnvironmentVariable("HOME")
+              : Environment.ExpandEnvironmentVariables("%HOMEDRIVE%%HOMEPATH%");
+
+            return path.Replace("~", home);
         }
     }
     internal class ExemploFileEscrevendo {
         public static void Executar() {
             //o @ serve pra usar a string de forma literal. No caso do \n por exp, não quebra a linha
-            //o "~" é a parte HOME do path do caminho do usuário
+            //o "~" é substituído pelo HOME do usuário logado no sistema operacional
             var path = @"~/Primeiro arquivo.txt".UpdateHomePath();
 
             if(!File.Exists(path)) {
-                //motivo de usar o using: quando usa escrita de arquivos, o C# vai alocar/abrir
-                //alguns recursos do sistema operacional que é importante que esses recursos sejam
-                //fechados quando parar de usá-los. Só é possível usá-lo quando entre os (), utiliza
-                //algo que implementa um IDisposable
-                //para usar o using, basta colocar conforme a seguir. Depois que sair do bloco, o
-                //sistema vai fechar todos recursos que foram usados para escrever no disco
+                //motivo de usar o using: quando usa escrita de arquivos, o C# aloca/abre alguns recursos do sistema operacional e é importante que esses recursos sejam fechados quando parar de usá-los.
+                //Só é possível usar o "using" quando o que está entre os (), utiliza algo que implementa um IDisposable. Depois que sair do bloco, o sistema vai fechar todos recursos que foram usados para escrever no disco
                 using(StreamWriter sw = File.CreateText(path)) {
                     //File.CreateText cria o arquivo
                     //esse StreamWriter é um stream de dados que vai escrevendo em determinado local
@@ -49,8 +45,6 @@ namespace CursoCSharp.API {
                 sw.WriteLine("2"); //adiciona esse texto no primeiroArquivo.txt
 
             }
-
-
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CursoCSharp.Excecoes {
 
     public class Conta {
-        double Saldo;
+       private double Saldo;
 
         public Conta(double saldo) {
             Saldo = saldo;
@@ -34,7 +34,7 @@ namespace CursoCSharp.Excecoes {
                 Console.WriteLine(e.Message);
                 //e.Message pega a mensagem que foi lançada no erro
             } finally { 
-                //executa SEMPRE. Mesmo ocorrendo erro ou não, é executado o que está no finally
+                //executa SEMPRE. Ocorrendo erro ou não
             }
         }
     }

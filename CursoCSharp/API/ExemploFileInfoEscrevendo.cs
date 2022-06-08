@@ -18,9 +18,14 @@ namespace CursoCSharp.API {
         public static void Executar() {
             string origem = @"~/Origem.txt".UpdateHomePath();
             string copiaOrigem = @"~/Copia origem.txt".UpdateHomePath();
-            string destino = @"~/Destino.txt".UpdateHomePath();
+            string destino = @"~/Destino".UpdateHomePath();
+            string destinoArquivo = $@"{destino}/Destino.txt".UpdateHomePath();
 
-            ExcluirDados(origem, copiaOrigem, destino);
+            if(!Directory.Exists(destino)) {
+                Directory.CreateDirectory(destino);   
+            }
+
+            ExcluirDados(origem, copiaOrigem, destinoArquivo);
 
             using(StreamWriter sw = File.AppendText(origem)) {
                 sw.WriteLine("Arquivo original!");
@@ -41,8 +46,13 @@ namespace CursoCSharp.API {
             Console.WriteLine("LastWriteTime: " + fi.LastWriteTime);
             Console.WriteLine("LastWriteTimeUtc: " + fi.LastWriteTimeUtc);
 
+            Console.WriteLine("Digite algo para continuar");
+            Console.ReadLine();
+
             fi.CopyTo(copiaOrigem);
-            fi.MoveTo(destino);
+            Console.WriteLine("Digite algo para continuar");
+            Console.ReadLine();
+            fi.MoveTo(destinoArquivo);
         }
     }
 }

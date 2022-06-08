@@ -40,11 +40,11 @@ namespace CursoCSharp.OO {
     }
     internal class Sealed {
         public static void Executar() {
-            Console.WriteLine("Uma classe do tipo sealed não pode ser herdada");
-            Console.WriteLine("");
+            Console.WriteLine("Uma classe do tipo sealed não pode ser herdada\n");
+
             Console.WriteLine("Não é possível sobrescrever um método do tipo sealed usando o " +
-                "override. Porém, é possível criar um método com o mesmo nome");
-            Console.WriteLine("");
+                "override. Porém, é possível criar um método com o mesmo nome\n");
+
             Console.WriteLine("Leia o código caso queira entender melhor como funciona!");
         }
     }

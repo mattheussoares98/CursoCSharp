@@ -19,20 +19,21 @@ namespace CursoCSharp.Colecoes {
             filmes.Add(5, "2003");
 
             foreach(var filme in filmes) {
-                int key = filme.Key;
-                Console.WriteLine("filme.key: " + key);
-                Console.WriteLine(filmes[key]);
+                Console.WriteLine("filme.key: " + filme.Key);
+                Console.WriteLine("filme.value: " + filmes[filme.Key]+ "\n");
                 //Console.WriteLine(filmes.GetValueOrDefault(key)); retorna os valores também
+                Console.Write("removeu: " + filmes.Remove(filme.Key, out string? removeu));
+
                 //bool removeu = filmes.Remove(key);
                 //Console.WriteLine($"Removeu o filme: {removeu}");
 
-                filmes.TryGetValue(key, out string? correctValue);
-                Console.WriteLine("correctValue: " + correctValue);
+                filmes.TryGetValue(filme.Key, out string? correctValue);
+                Console.WriteLine("\ncorrectValue: " + correctValue);
 
                 bool temEssaChave = filmes.TryGetValue(200, out string? incorrectValue);
                 //não tem problema se não houver essa chave 200
                 if(temEssaChave) {
-                    Console.WriteLine("incorrectValue: " + incorrectValue);
+                    Console.WriteLine("\nincorrectValue: " + incorrectValue);
                     //quando não possui um valor correspondente à chave digitada, ele não imprime o
                     //valor no console. Imprime nulo
                 }

@@ -16,17 +16,17 @@ namespace CursoCSharp.OO {
 
     public class Feijao: Comida {
         public Feijao(double peso) : base(pesoComida: peso) {
-            PesoComida = peso;
+            //PesoComida = peso; //não precisa fazer essa tribuição porque no construtor do base já faz isso
         }
     }
     public class Arroz: Comida {
         public Arroz(double peso) : base(pesoComida: peso) {
-            PesoComida = peso;
+            //PesoComida = peso; //não precisa fazer essa tribuição porque no construtor do base já faz isso
         }
     }
     public class Mistura: Comida {
         public Mistura(double peso) : base(pesoComida: peso) {
-            PesoComida = peso;
+            //PesoComida = peso; //não precisa fazer essa tribuição porque no construtor do base já faz isso
         }
     }
     public class Pessoa {

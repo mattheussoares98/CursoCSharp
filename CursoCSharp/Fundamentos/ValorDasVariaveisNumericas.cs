@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CursoCSharp.Fundamentos {
     internal class ValorDasVariaveisNumericas {
+        //ao segurar o control e clicar em cima do tipo da variável, já é possível visualizar o valor máximo e mínimo da variável
         public static void Executar() {
             Console.WriteLine("Executando!!!");
 

@@ -43,8 +43,8 @@ namespace CursoCSharp.OO {
 
 
         //public Cachorro(string nome) : this(nome, 0.0) { }
-        //não pode fazer isso senão vai chamar o construtor com dois parâmetros e vai ficar de
-        //forma cíclica, somente dentro desse construtor aqui e não vai chamar outros
+        //não pode fazer isso senão vai chamar um construtor que não faz referência à algum construtor da classe herdada. Sempre que uma classe herda outra, é necessário usar o base para associar o construtor à classe herdada. 
+        //Funciona usar o this quando o construtor que está referenciando utiliza uma referência para a classe herdada
 
     }
     internal class ConstrutorThis {
