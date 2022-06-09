@@ -5,6 +5,7 @@ using CursoCSharp.OO;
 using CursoCSharp.MetodosEFuncoes;
 using CursoCSharp.Excecoes;
 using CursoCSharp.API;
+using CursoCSharp.TopicosAvancados;
 
 namespace CursoCSharp {
     class Program {
@@ -19,7 +20,7 @@ namespace CursoCSharp {
                 {"Formatando Numeros - Formatando números", FormatandoNumeros.Executar},
                 {"Conversoes - Conversões", Conversoes.Executar},
 
-                //Classes e métodos - coloquei somente o que não sabia
+                // Classes e métodos - coloquei somente o que não sabia
                 {"Params - Classes e métodos", Params.Executar},
                 {"Parametros Nomeados - Classes e métodos", ParametrosNomeados.Executar},
                 {"Propriedades - Classes e métodos", Propriedades.Executar},
@@ -28,7 +29,7 @@ namespace CursoCSharp {
                 {"Exemplo Struct - Classes e métodos", ExemploStruct.Executar},
                 {"Parmâmetros por referência - Classes e métodos", ParametrosPorReferenciaRefOut.Executar},
 
-                //Coleções
+                // Coleções
                 {"Array - Coleções", Colecoes.Array.Executar},
                 {"List - Coleções", List.Executar},
                 {"Queue = Fila - Coleções", FilaQueue.Executar},
@@ -37,7 +38,7 @@ namespace CursoCSharp {
                 {"Dictionary - OO", Dictionary.Executar},
 
 
-                //OO
+                // OO
                 {"Herança - OO", Heranca.Executar},
                 {"Construtor This - OO", ConstrutorThis.Executar},
                 {"Encapsulamento - OO", OO.Encapsulamento.Executar},
@@ -46,16 +47,16 @@ namespace CursoCSharp {
                 {"Interface - OO", Interface.Executar},
                 {"Sealed - OO", Sealed.Executar},
 
-                //Métodos e funções
+                // Métodos e funções
                 {"Action e Func - Métodos e funções", ActionEFunc.Executar},
                 {"Delegate - Métodos e funções", MetodosEFuncoes.Delegate.Executar},
                 {"Métodos de extensão - Métodos e funções", MetodosDeExtensao.Executar},
 
-                //Exceções
+                // Exceções
                 {"Exceções - Exceções", Excecoes.Excecoes.Executar},
                 {"Exceções Personalizadas - Exceções", ExcecoesPersonalizadas.Executar},
 
-                //API
+                // API
                 {"Exemplo File Escrevendo - API",  ExemploFileEscrevendo.Executar},
                 {"Exemplo File Lendo Dados - API",  ExemploFileLendoDados.Executar},
                 {"Exemplo File Info Escrevendo - API",  ExemploFileInfoEscrevendo.Executar},
@@ -63,6 +64,9 @@ namespace CursoCSharp {
                 {"Exemplo Path - API",  ExemploPath.Executar},
                 {"Datas - API",  Datas.Executar},
                 {"TimeSpan - API",  ExemploTimeSpan.Executar},
+
+                // Tópicos avançados
+                {"LINQ1 - API",  LINQ1.Executar},
             });
 
             central.SelecionarEExecutar();
