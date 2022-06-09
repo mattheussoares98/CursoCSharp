@@ -10,7 +10,7 @@ namespace CursoCSharp.API {
 
         public AlterarData() {
         }
-        public static void AlterarDataInformada(DateTime dataInformada, double dias = 0, int meses = 0, int anos = 0) {
+        public static void AlterarDataInformada(DateTime dataInformada, int dias = 0, int meses = 0, int anos = 0) {
             dataInformada = dataInformada.AddDays(dias);
             dataInformada = dataInformada.AddMonths(meses);
             dataInformada = dataInformada.AddYears(anos);

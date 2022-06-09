@@ -6,10 +6,10 @@
         //acessável por herança
         protected string CorDoOlho = "Verde";
 
-        //mesmo projeto (assembly)
+        //mesmo projeto (namespace)
         internal ulong NumeroCelular = 11961235430;
 
-        //herança ou mesmo projeto
+        //herança ou mesmo projeto (namespace)
         internal protected string JeitoDeFalar = "Uso muitas gírias";
 
         //mesma classe ou herança no mesmo projeto

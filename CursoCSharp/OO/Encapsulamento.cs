@@ -38,7 +38,6 @@ namespace CursoCSharp.OO {
 
             Console.WriteLine("");
             Console.WriteLine("############ Filho distante ############");
-            Console.WriteLine("Filho distante");
             Console.WriteLine("");
 
             new FilhoDistante().MeusAcessos();

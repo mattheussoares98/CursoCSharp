@@ -12,20 +12,8 @@ namespace CursoCSharp.ClassesEMetodos {
 
     struct StructEixos: IPonto { //como se fosse um "with" do dart
 
-        int x;
-        int y;
-
-        public int X {
-            get => x;
-            set => x = value;
-        }
-        public int Y {
-            get => y;
-            set => y = value;
-        }
-
-
-
+        public int X;
+        public int Y;
         public void AlterarEixos(int x, int y) {
             X = x;
             Y = y;
@@ -44,6 +32,8 @@ namespace CursoCSharp.ClassesEMetodos {
 
     internal class ExemploStruct {
         static public void Executar() {
+            Console.WriteLine("Um struct é muito parecido com uma classe. O que muda entre os dois são apenas duas coisas:\n 1: A única coisa que muda na estrutura dos dois é que um usa class na definição e outro usa struct\n 2: Quando faz uma cópia de um struct, não faz referência ao mesmo local da memória. Já quando faz uma cópia de uma classe, está fazendo referência ao mesmo local de memória. Por isso, se mudar o valor da cópia da classe, vai alterar o valor dos dois (original e cópia). Já no struct, não altera dos dois\n");
+
             StructEixos structEixos1 = new() {
                 X = 0, Y = 0
             };

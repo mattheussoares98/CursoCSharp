@@ -15,9 +15,8 @@ namespace CursoCSharp.ClassesEMetodos {
             numero += 100;
         }
 
-        public static void AlterarRef(ref int numero) {//o ideal é não usar o ref, pois pode causar
-                                                       //mais bugs no app. O ideal é usar o out
-         //um ref faz uma referência para o mesmo espaço da memória, por isso não é aconselhável usar mt
+        public static void AlterarRef(ref int numero) {
+            //Um ref faz uma referência para o mesmo espaço da memória, por isso não é muito aconselhável usar
             numero += 100;
         }
         public static void Executar() {

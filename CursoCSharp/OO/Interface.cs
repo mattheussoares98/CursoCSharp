@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CursoCSharp.OO {
 
     interface IOperacaoBinaria {
-        //de padrão, todos métodos de um interface são públicos
+        //Todos os métodos de interface precisam ser públicos
         //não é possível implementar o corpo do método
         int Operacao(int a, int b);
     }

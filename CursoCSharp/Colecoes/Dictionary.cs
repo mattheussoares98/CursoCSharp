@@ -22,7 +22,7 @@ namespace CursoCSharp.Colecoes {
                 Console.WriteLine("filme.key: " + filme.Key);
                 Console.WriteLine("filme.value: " + filmes[filme.Key]+ "\n");
                 //Console.WriteLine(filmes.GetValueOrDefault(key)); retorna os valores também
-                Console.Write("removeu: " + filmes.Remove(filme.Key, out string? removeu));
+                Console.Write("removeu: " + filmes.Remove(filme.Key, out string? removeu) + $" {removeu}" );
 
                 //bool removeu = filmes.Remove(key);
                 //Console.WriteLine($"Removeu o filme: {removeu}");

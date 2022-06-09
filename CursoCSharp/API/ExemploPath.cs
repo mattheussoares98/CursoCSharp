@@ -20,7 +20,6 @@ namespace CursoCSharp.API {
             Console.WriteLine("GetRandomFileName: " + Path.GetRandomFileName());
             Console.WriteLine("GetTempFileName: " + Path.GetTempFileName());
             Console.WriteLine("GetTempPath: " + Path.GetTempPath());
-            Console.WriteLine("Fazendo uma alteração");
         }
     }
 }

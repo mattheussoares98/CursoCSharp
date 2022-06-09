@@ -13,8 +13,8 @@ namespace CursoCSharp.MetodosEFuncoes {
             Func<int> rintNumero = () => { return 0; };
             //o último generic é sempre o retorno da função
 
-            Func<int, double, string> rintIdadeEAltura = (int idade, double altura)
-            //nesse caso recebe 2 int como parâmetro e retorna uma string
+            Func<double, double, string> rintIdadeEAltura = (double idade, double altura)
+            //nesse caso recebe 2 double como parâmetro e retorna uma string
                 => {
                     return $"Altura: {altura}, idade: {idade}";
                 };

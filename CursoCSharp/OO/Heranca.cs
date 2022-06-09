@@ -13,62 +13,53 @@ namespace CursoCSharp.OO {
         public Carro(int velocidadeMaxima) {
             VelocidadeMaxima = velocidadeMaxima;
         }
-        protected int AlterarVelocidade(int delta) {
+        protected int AlterarVelocidade(int velocidadeAdicionada) {
 
-            if(VelocidadeAtual + delta > VelocidadeMaxima) {
-                Console.WriteLine("A velocidade não pode ser atribuída, pois ultrapassaria a velocidade máxima");
+            if(VelocidadeAtual + velocidadeAdicionada > VelocidadeMaxima) {
+                Console.WriteLine("A velocidade não pode ser atribuída, pois ultrapassaria a velocidade máxima \nAtribuindo a velocidade máxima ao carro...");
                 VelocidadeAtual = VelocidadeMaxima;
-            } else if(VelocidadeAtual + delta < 0) {
+            } else if(VelocidadeAtual + velocidadeAdicionada < 0) {
                 Console.WriteLine("A velocidade não pode ser atribuída, pois ficaria menor que 0");
                 VelocidadeAtual = 0;
             } else {
                 //Console.WriteLine("Velocidade atribuída com sucesso");
-                VelocidadeAtual += delta;
+                VelocidadeAtual += velocidadeAdicionada;
             }
 
             return VelocidadeAtual;
         }
 
-        public virtual int Acelerar() { //a palavra virtual indica que esse método pode ser
-                                        //sobrescrito. De padrão, os métodos não podem ser
-                                        //sobrescritos
+        public virtual int Acelerar() { //a palavra virtual indica que esse método pode ser sobrescrito. De padrão, os métodos não podem ser sobrescritos
             return AlterarVelocidade(10);
 
         }
 
-        public virtual int Frear() { //a palavra virtual indica que esse método pode ser
-                                     //sobrescrito. De padrão, os métodos não podem ser
-                                     //sobrescritos
+        public virtual int Frear() { //a palavra virtual indica que esse método pode ser sobrescrito. De padrão, os métodos não podem ser sobrescritos
             return AlterarVelocidade(-10);
         }
     }
 
     public class Uno: Carro {
-        public Uno() : base(200) { }
-        //como o Uno está herdando a classe Carro, ele precisa fazer referência a pelo menos um
-        //construtor do Carro, utilizando o base
+        public Uno() : base(velocidadeMaxima: 200) { }
+        //como o Uno está herdando a classe Carro, ele precisa fazer referência a pelo menos um construtor do Carro utilizando o base
     }
 
     public class Ferrari: Carro {
         public Ferrari() : base(velocidadeMaxima: 350) { }
-        //como a Ferrari está herdando a classe Carro, ele precisa fazer referência a pelo menos um
-        //construtor do Carro, utilizando o base
+        //como a Ferrari está herdando a classe Carro, ele precisa fazer referência a pelo menos um construtor do Carro, utilizando o base
 
         public override int Acelerar() {
-            //só foi possível sobrescrever o método porque foi adicionado um "virtual" na
-            //declaração do método. É obrigatório informar que é virtual para conseguir
-            //sobrescrever. O método precisa receber os mesmos parâmetros que a classe que
-            //está sendo sobrescrita
+            //só foi possível sobrescrever o método porque foi adicionado um "virtual" na declaração do método. É obrigatório informar que é virtual para conseguir sobrescrever. O método precisa receber os mesmos parâmetros que a classe que está sendo sobrescrita
             return AlterarVelocidade(20);
         }
 
         public override int Frear() {
-            //só foi possível sobrescrever o método porque foi adicionado um "virtual" na
-            //declaração do método. É obrigatório informar que é virtual para conseguir
-            //sobrescrever. O método precisa receber os mesmos parâmetros que a classe que
-            //está sendo sobrescrita
+            //só foi possível sobrescrever o método porque foi adicionado um "virtual" na declaração do método. É obrigatório informar que é virtual para conseguir sobrescrever. O método precisa receber os mesmos parâmetros que a classe que está sendo sobrescrita
             return AlterarVelocidade(-20);
         }
+    }
+
+    public class Teste {
     }
     internal class Heranca {
         public static void Executar() {
@@ -97,29 +88,29 @@ namespace CursoCSharp.OO {
             Console.WriteLine(ferrari.Frear());
             Console.WriteLine(ferrari.Frear());
 
-            Carro carro1 = new Uno();
+            Carro carro = new Uno(); //só é possível fazer essa atribuição porque o Uno herda a classe Carro
             Console.WriteLine("#####################################################################################");
             Console.WriteLine("Criando uma variável do tipo Carro e atribuindo um Uno à ela");
             Console.WriteLine("Acelerando o Uninho");
-            Console.WriteLine(carro1.Acelerar());
-            Console.WriteLine(carro1.Acelerar());
-            Console.WriteLine(carro1.Acelerar());
+            Console.WriteLine(carro.Acelerar());
+            Console.WriteLine(carro.Acelerar());
+            Console.WriteLine(carro.Acelerar());
             Console.WriteLine("Freando o Uninho");
-            Console.WriteLine(carro1.Frear());
-            Console.WriteLine(carro1.Frear());
-            Console.WriteLine(carro1.Frear());
-            Console.WriteLine(carro1.Frear());
+            Console.WriteLine(carro.Frear());
+            Console.WriteLine(carro.Frear());
+            Console.WriteLine(carro.Frear());
+            Console.WriteLine(carro.Frear());
 
-            carro1 = new Ferrari();
+            carro = new Ferrari(); //só é possível fazer essa atribuição porque a Ferrari herda a classe Carro
             Console.WriteLine("Alterando o tipo do carro para uma Ferrari e acelerando ela");
-            Console.WriteLine(carro1.Acelerar());
-            Console.WriteLine(carro1.Acelerar());
-            Console.WriteLine(carro1.Acelerar());
+            Console.WriteLine(carro.Acelerar());
+            Console.WriteLine(carro.Acelerar());
+            Console.WriteLine(carro.Acelerar());
             Console.WriteLine("Freando a Ferrari");
-            Console.WriteLine(carro1.Frear());
-            Console.WriteLine(carro1.Frear());
-            Console.WriteLine(carro1.Frear());
-            Console.WriteLine(carro1.Frear());
+            Console.WriteLine(carro.Frear());
+            Console.WriteLine(carro.Frear());
+            Console.WriteLine(carro.Frear());
+            Console.WriteLine(carro.Frear());
         }
     }
 }

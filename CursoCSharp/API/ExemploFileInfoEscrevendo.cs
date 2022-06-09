@@ -21,11 +21,12 @@ namespace CursoCSharp.API {
             string destino = @"~/Destino".UpdateHomePath();
             string destinoArquivo = $@"{destino}/Destino.txt".UpdateHomePath();
 
-            if(!Directory.Exists(destino)) {
-                Directory.CreateDirectory(destino);   
-            }
 
-            ExcluirDados(origem, copiaOrigem, destinoArquivo);
+            ExcluirDados(origem, copiaOrigem, destinoArquivo, destino);
+
+            if(!Directory.Exists(destino)) {
+                Directory.CreateDirectory(destino);
+            }
 
             using(StreamWriter sw = File.AppendText(origem)) {
                 sw.WriteLine("Arquivo original!");

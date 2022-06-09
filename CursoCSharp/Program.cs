@@ -62,6 +62,7 @@ namespace CursoCSharp {
                 {"Diretorios - API",  Diretorios.Executar},
                 {"Exemplo Path - API",  ExemploPath.Executar},
                 {"Datas - API",  Datas.Executar},
+                {"TimeSpan - API",  ExemploTimeSpan.Executar},
             });
 
             central.SelecionarEExecutar();

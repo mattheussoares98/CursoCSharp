@@ -26,14 +26,10 @@ namespace CursoCSharp.OO {
         }
 
         public Cachorro(string nome) : base(nome: nome) { }
-        //como a classe Cachorro está herdando de Animal, que possui um construtor, precisa haver
-        //pelo menos um construtor pra classe Cachorro e deve usar o base para referenciar ao
-        //construtor da classe Animal
+        //como a classe Cachorro está herdando de Animal que possui um construtor, precisa haver pelo menos um construtor pra classe Cachorro e deve usar o base para referenciar o construtor da classe Animal
 
         public Cachorro(string nome, double altura) : this(nome) {
-            //o this está se referenciando ao construtor acima desse aqui
-            //se retirar o this, da erro porque o construtor não vai fazer referência ao contrutor
-            //do Animal, que é uma classe que está sendo herdada
+            //o this está se referenciando ao construtor acima desse aqui. Se retirar o this, da erro porque o construtor não vai fazer referência ao contrutor do Animal, que é uma classe que está sendo herdada
             Altura = altura;
         }
         public Cachorro(string nome, double altura, int idade) : base(nome: nome) {

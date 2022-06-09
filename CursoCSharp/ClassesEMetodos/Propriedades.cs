@@ -7,13 +7,16 @@ using System.Threading.Tasks;
 namespace CursoCSharp.ClassesEMetodos {
     public class Produto {
 
-        public Produto(double preco, double desconto, string nome) {
+        public Produto(double preco = 0, double desconto = -1, string nome = "") {
             Nome = nome;
             Preco = preco;
             Desconto = desconto;
         }
 
         public Produto() {
+            Nome = nome;
+            Preco = preco;
+            Desconto = desconto;
         }
 
         double preco = 0;
@@ -105,7 +108,7 @@ namespace CursoCSharp.ClassesEMetodos {
             }
 
             while(produto.Desconto < 0 || produto.Desconto > 100) {
-                Console.Write("Digite o DESCONTO do produto: ");
+                Console.Write("Digite o DESCONTO do produto em porcentagem. Digite somente os números: ");
                 string? dadoDigitadoPeloUsuario = Console.ReadLine();
 
                 bool dadoDigitadoEhValido;
