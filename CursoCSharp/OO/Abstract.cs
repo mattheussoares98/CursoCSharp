@@ -31,7 +31,7 @@ namespace CursoCSharp.OO {
             Console.WriteLine(valorInicial);
         }
         //public new static int Decrementar() => valorInicial;
-        public override double Operacao(double valor) => valorInicial += valor; //só deu certo porque adicionei o ++ antes da variável, pois demonstra que tem precedência antes de retornar seu valorInicial na função. Se colocar depois, vai mostrar o valorInicial incorreto na impressão
+        public override double Operacao(double valor) => valorInicial += valor;
 
 
         //public new static double Somar(double valor) => valorInicial += valor; //tanto essa linha quanto a de baixo funcionam

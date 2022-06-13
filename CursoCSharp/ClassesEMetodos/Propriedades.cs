@@ -13,11 +13,11 @@ namespace CursoCSharp.ClassesEMetodos {
             Desconto = desconto;
         }
 
-        public Produto() {
-            Nome = nome;
-            Preco = preco;
-            Desconto = desconto;
-        }
+        //public Produto() {
+        //    Nome = nome;
+        //    Preco = preco;
+        //    Desconto = desconto;
+        //}
 
         double preco = 0;
         string nome = "";
@@ -72,9 +72,7 @@ namespace CursoCSharp.ClassesEMetodos {
                 Console.Write("Digite o NOME do produto: ");
                 string? dadoDigitadoPeloUsuario = Console.ReadLine();
 
-                bool dadoDigitadoEhValido;
-
-                dadoDigitadoEhValido = dadoDigitadoPeloUsuario != "" ? true : false;
+                bool dadoDigitadoEhValido = dadoDigitadoPeloUsuario != "" ? true : false;
                 if(dadoDigitadoEhValido) {
                     produto.Nome = dadoDigitadoPeloUsuario!;
 
@@ -115,7 +113,7 @@ namespace CursoCSharp.ClassesEMetodos {
 
                 dadoDigitadoEhValido = double.TryParse(dadoDigitadoPeloUsuario!, out double result);
 
-                if(dadoDigitadoEhValido && result >=0 && result <= 100) {
+                if(dadoDigitadoEhValido && result >= 0 && result <= 100) {
                     produto.Desconto = double.Parse(dadoDigitadoPeloUsuario!);
 
                     Console.WriteLine("Desconto adicionado com sucesso!");
