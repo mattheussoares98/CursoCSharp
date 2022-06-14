@@ -36,6 +36,7 @@ namespace CursoCSharp {
                 {"Igualdade - Coleções", Igualdade.Executar},
                 {"Stack - Coleções", FilaStack.Executar},
                 {"Dictionary - OO", Dictionary.Executar},
+                {"Matriz - OO", Matriz.Executar},
 
 
                 // OO
