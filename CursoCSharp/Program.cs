@@ -35,8 +35,8 @@ namespace CursoCSharp {
                 {"Queue = Fila - Coleções", FilaQueue.Executar},
                 {"Igualdade - Coleções", Igualdade.Executar},
                 {"Stack - Coleções", FilaStack.Executar},
-                {"Dictionary - OO", Dictionary.Executar},
-                {"Matriz - OO", Matriz.Executar},
+                {"Dictionary - Coleções", Dictionary.Executar},
+                {"Matriz - Coleções", Matriz.Executar},
 
 
                 // OO
