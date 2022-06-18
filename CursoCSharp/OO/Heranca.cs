@@ -50,11 +50,17 @@ namespace CursoCSharp.OO {
 
         public override int Acelerar() {
             //só foi possível sobrescrever o método porque foi adicionado um "virtual" na declaração do método. É obrigatório informar que é virtual para conseguir sobrescrever. O método precisa receber os mesmos parâmetros que a classe que está sendo sobrescrita
+
+            //base.Acelerar();//executa o que está no corpo do método marcado como virtual, mesmo ele sendo sobrescrito aqui
+
             return AlterarVelocidade(20);
         }
 
         public override int Frear() {
             //só foi possível sobrescrever o método porque foi adicionado um "virtual" na declaração do método. É obrigatório informar que é virtual para conseguir sobrescrever. O método precisa receber os mesmos parâmetros que a classe que está sendo sobrescrita
+
+            //base.Frear();//executa o que está no corpo do método marcado como virtual, mesmo ele sendo sobrescrito aqui
+
             return AlterarVelocidade(-20);
         }
     }
