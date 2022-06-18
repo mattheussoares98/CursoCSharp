@@ -59,6 +59,7 @@ namespace CursoCSharp {
                 {"Action e Func - Métodos e funções", ActionEFunc.Executar},
                 {"Delegate - Métodos e funções", MetodosEFuncoes.Delegate.Executar},
                 {"Métodos de extensão - Métodos e funções", MetodosDeExtensao.Executar},
+                {"Recursividade - Métodos e funções", Recursividade.Executar},
                 #endregion
 
                 #region  Exceções
