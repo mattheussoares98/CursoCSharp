@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CursoCSharp.Colecoes {
 
-    internal class Set {
+    internal class HashSet {
 
         public static void Executar() {
             HashSet<Produto> carrinho = new();

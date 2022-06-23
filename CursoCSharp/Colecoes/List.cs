@@ -39,6 +39,8 @@ namespace CursoCSharp.Colecoes {
         };
 
             carrinho.AddRange(combo); //percorre cada item da lista e adiciona no carrinho
+
+            //carrinho.Sort();//organiza em ordem alfabética
         }
     }
 }
