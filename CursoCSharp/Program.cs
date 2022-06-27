@@ -32,6 +32,7 @@ namespace CursoCSharp {
                 {"Exemplo Enum - Classes e métodos", ExemploEnum.Executar},
                 {"Exemplo Struct - Classes e métodos", ExemploStruct.Executar},
                 {"Parmâmetros por referência - Classes e métodos", ParametrosPorReferenciaRefOut.Executar},
+                {"Threads - Classes e métodos", Threads.Executar},
                 #endregion
 
                 #region  Coleções
@@ -75,6 +76,7 @@ namespace CursoCSharp {
                 {"Exemplo Path - API",  ExemploPath.Executar},
                 {"Datas - API",  Datas.Executar},
                 {"TimeSpan - API",  ExemploTimeSpan.Executar},
+                {"Environment - API",  Environments.Executar},
                  #endregion
 
                 #region  Tópicos avançados

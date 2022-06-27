@@ -8,15 +8,34 @@ namespace CursoCSharp.Colecoes {
     internal class Dictionary {
         //o Dictionary é igual ao map no dart
         public static void Executar() {
-            Dictionary<int, string> filmes = new();
-            //não pode repetir a chave/key, que no caso é um int
+            Dictionary<int, string> filmes = new() {
+                //não pode repetir a chave/key, que no caso é um int
 
-            filmes.Add(0, "1998");
-            filmes.Add(1, "1999");
-            filmes.Add(2, "2000");
-            filmes.Add(3, "2001");
-            filmes.Add(4, "2002");
-            filmes.Add(5, "2003");
+                {
+                    0,
+                    "1998"
+                },
+                {
+                    1,
+                    "1999"
+                },
+                {
+                    2,
+                    "2000"
+                },
+                {
+                    3,
+                    "2001"
+                },
+                {
+                    4,
+                    "2002"
+                },
+                {
+                    5,
+                    "2003"
+                }
+            };
 
             foreach(var filme in filmes) {
                 Console.WriteLine("filme.key: " + filme.Key);
